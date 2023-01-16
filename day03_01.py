@@ -1,46 +1,32 @@
 #Chapter 5: Text string
 
-#5.5 복제하기
-start="Na "*4+"\n"
-middle="Hey "*3+"\n"
-end="Goodbye."
-print(start+start+middle+end)
+#5.12 문자열 스트립: strip() // 양 사이드에 달려있는 것만 특정해서 지우기
+subjects="  python, data structure, database    "
+print(subjects)
+print(subjects.strip())
+subjects2=" $ python, data structure, database    $$$$$"
+print(subjects2.strip("$")) #공란이 앞에 있기 때문에 $ 표시가 안 지워짐
+#나중에 뭔가를 다운받았을 때, 쓰잘떼기 없는 것들을 지울 때 쓰임
 
-#5.7 슬라이스로 부분 문자열 추출
-univ="Inha University"
-print(univ[5:])
-print(univ[5:15])
-print(univ[-10:])
-print(univ[:14])
-print(univ[0:14:3])
-print(univ[::3])
-print(univ[5:-6])
-print(univ[-10:-6])
+blurt="What the ...!!?"
+print(blurt.strip(".?!"))
 
-#5.8 문자열의 길이: len()
-print(len(univ))
+#5.13 검색과 선택
+print(subjects.find("data"), subjects.index("data"))
+# 못 찾았을 때
+#print(subjects.find("inha"))
+#print(subjects.index("inha"))
+print(subjects[10:15])
+print(subjects.count("data"))
 
-#5.9 문자열 나누기: split()
-tasks="get gloves, get mask, give cat vitamins, call ambuland"
-delimiter=","
-print(tasks.split(delimiter))
-delimiter_2="i"
-print(univ.split(delimiter_2))
+#5.14 대소문자
+print(subjects.title())
 
-
-#5.10 문자열 결합하기: join()
-poke_mons=["피카츄", "꼬북이", "파이리", "이상해씨"]
-dele_poke=", "
-poke_mons_string=dele_poke.join(poke_mons)
-print(poke_mons_string)
+#5.15 정렬
+print(subjects.center(60))
+print(subjects.ljust(50))
+print(subjects.rjust(80))
 
 
-#5.11 문자열 대체하기: replaced()
-setup="a duck goses into a bar..."
-setup.replace("duck", "marmoset")
-print(id(setup))
-print(id(setup.replace("duck", "marmoset")))
-print(setup)
-inha="a duck goes into a sea"
-print(inha.replace('a','a nice'))
-print(inha.replace('a ', 'a nice '))
+#5.16 formating
+# "%": Old style
