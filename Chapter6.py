@@ -1,43 +1,17 @@
-#Chapter6 예제
+#Chapter6 예제 두 수 사이의 소수를 전부 나열하는 코드
 
-#prime number
+num1=int(input("number1:"))
+num2=int(input("number2:"))
 
-'''number=int(input("Type a number:"))
-counts=0
+if num1>num2:
+    num1,num2=num2,num1
 
-k=1
-while k<=number:
-    if number%k==0:
-        counts+=1
-    k+=1
-if counts==2:
-    print(f"{number} is a prime number.")
-else:
-    print(f"{number} is not a prime number")
-    '''
-
-# prime number determination by using 'for' statement
-'''number=int(input("Type a number:"))
-counts=0
-for i in range(1,number+1):
-    if number%i==0:
-        counts+=1
-    break
-
-if counts==2:
-    print(f"{number} is a prime number.")
-else:
-    print(f"{number} is not a prime number")'''
-
-number=int(input("Type a number:"))
-is_prime=True
-for i in range(2,number):
-    if number%i==0:
-        is_prime=False
-        break
-    print(i)
-
-if is_prime:
-    print(f"{number} is a prime number.")
-else:
-    print(f"{number} is not a prime number")
+for i in range(num1,num2+1):
+    if i<=1:
+        continue
+    elif i>1:
+        for k in range(2,i):
+            if i%k==0:
+                break
+        else:
+            print(i,end=' ')
