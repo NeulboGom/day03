@@ -17,7 +17,7 @@ else:
     '''
 
 # prime number determination by using 'for' statement
-number=int(input("Type a number:"))
+'''number=int(input("Type a number:"))
 counts=0
 for i in range(1,number+1):
     if number%i==0:
@@ -25,6 +25,19 @@ for i in range(1,number+1):
     break
 
 if counts==2:
+    print(f"{number} is a prime number.")
+else:
+    print(f"{number} is not a prime number")'''
+
+number=int(input("Type a number:"))
+is_prime=True
+for i in range(2,number):
+    if number%i==0:
+        is_prime=False
+        break
+    print(i)
+
+if is_prime:
     print(f"{number} is a prime number.")
 else:
     print(f"{number} is not a prime number")
