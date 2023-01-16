@@ -1,16 +1,30 @@
-#Chapter6 반복문
+#Chapter6 예제
 
-#for statement 구구단
+#prime number
 
-dan=int(input("Dan is: "))
+'''number=int(input("Type a number:"))
+counts=0
 
-while True:
-    if dan==0:
-        break
-    elif 1<dan<10:
-        for i in range(1,10):
-            answer=dan*i
-            print(f"{dan}*{i}={answer}")
-        break
-    else:
-        print("2에서 9 사이의 숫자를 입력하세요.")
+k=1
+while k<=number:
+    if number%k==0:
+        counts+=1
+    k+=1
+if counts==2:
+    print(f"{number} is a prime number.")
+else:
+    print(f"{number} is not a prime number")
+    '''
+
+# prime number determination by using 'for' statement
+number=int(input("Type a number:"))
+counts=0
+for i in range(1,number+1):
+    if number%i==0:
+        counts+=1
+    break
+
+if counts==2:
+    print(f"{number} is a prime number.")
+else:
+    print(f"{number} is not a prime number")
